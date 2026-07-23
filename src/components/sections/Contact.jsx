@@ -1,0 +1,138 @@
+import { useState } from "react";
+import { toast } from "sonner";
+import { Mail, Phone, MapPin, MessageCircle, Linkedin, Github, Facebook, Send } from "lucide-react";
+import Reveal from "../ui/Reveal.jsx";
+import SectionLabel from "../ui/SectionLabel.jsx";
+
+function Field({ label, className = "", ...props }) {
+  return (
+    <div className={className}>
+      <label className="mono-label">{label}</label>
+      <input
+        required
+        {...props}
+        className="mt-2 w-full rounded-md border border-border bg-surface/60 px-3.5 py-2.5 text-sm text-foreground outline-none transition placeholder:text-ink-3 focus:border-primary/60 focus:bg-surface"
+      />
+    </div>
+  );
+}
+
+export default function Contact() {
+  const [sending, setSending] = useState(false);
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const name = String(fd.get("name") || "").trim();
+    const email = String(fd.get("email") || "").trim();
+    const msg = String(fd.get("message") || "").trim();
+    if (!name || name.length > 100) return toast.error("Please enter a valid name.");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 255)
+      return toast.error("Please enter a valid email.");
+    if (!msg || msg.length > 1000) return toast.error("Please enter a message (max 1000 chars).");
+    setSending(true);
+    const form = e.currentTarget;
+    setTimeout(() => {
+      setSending(false);
+      form.reset();
+      toast.success("Message sent. I'll get back to you shortly.");
+    }, 900);
+  };
+  const info = [
+    { icon: Mail, label: "Email", value: "contact@tokaydendy.com", href: "mailto:contact@tokaydendy.com" },
+    { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
+    { icon: MapPin, label: "Location", value: "New York, USA" },
+    { icon: MessageCircle, label: "WhatsApp", value: "+1 (555) 123-4567", href: "https://wa.me/15551234567" },
+  ];
+  const socials = [
+    { icon: Linkedin, href: "https://linkedin.com/in/tokaydendy", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/tokaydendy", label: "GitHub" },
+    { icon: Facebook, href: "https://facebook.com/tokaydendy", label: "Facebook" },
+  ];
+  return (
+    <section id="contact" className="band relative bg-surface/30">
+      <div className="mx-auto max-w-6xl px-6 py-24 sm:py-32 lg:px-8">
+        <Reveal>
+          <SectionLabel n="09">Contact</SectionLabel>
+        </Reveal>
+        <div className="mt-10 grid gap-16 lg:grid-cols-[1fr_1.2fr]">
+          <Reveal delay={0.05}>
+            <div>
+              <h2 className="font-display text-3xl leading-tight tracking-tight sm:text-4xl lg:text-[2.4rem]">
+                Let&apos;s build something <span className="text-primary">solid</span>.
+              </h2>
+              <p className="mt-5 max-w-md text-[15px] leading-relaxed text-ink-2">
+                Whether you&apos;re an ISP scaling a backbone or a business tightening security,
+                tell me about the network you want.
+              </p>
+              <ul className="mt-10 space-y-4">
+                {info.map((it) => (
+                  <li key={it.label} className="flex items-center gap-4 border-b border-border pb-4 last:border-0">
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-md border border-border bg-surface text-primary">
+                      <it.icon className="h-4 w-4" />
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <div className="mono-label text-[0.6rem]!">{it.label}</div>
+                      {it.href ? (
+                        <a href={it.href} className="text-sm text-foreground hover:text-primary">
+                          {it.value}
+                        </a>
+                      ) : (
+                        <div className="text-sm text-foreground">{it.value}</div>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 flex gap-2">
+                {socials.map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    aria-label={s.label}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="grid h-10 w-10 place-items-center rounded-md border border-border bg-surface text-ink-2 transition hover:border-primary/40 hover:text-primary"
+                  >
+                    <s.icon className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <form onSubmit={onSubmit} className="rounded-xl border border-border bg-background p-6 sm:p-8">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <Field label="Name" name="name" placeholder="Your full name" maxLength={100} />
+                <Field label="Email" name="email" type="email" placeholder="you@company.com" maxLength={255} />
+              </div>
+              <Field className="mt-4" label="Subject" name="subject" placeholder="Project or inquiry" maxLength={150} />
+              <div className="mt-4">
+                <label className="mono-label">Message</label>
+                <textarea
+                  name="message"
+                  rows={5}
+                  maxLength={1000}
+                  required
+                  placeholder="Tell me about your network..."
+                  className="mt-2 w-full resize-none rounded-md border border-border bg-surface/60 px-3.5 py-2.5 text-sm text-foreground outline-none transition placeholder:text-ink-3 focus:border-primary/60 focus:bg-surface"
+                />
+              </div>
+              <button
+                type="submit"
+                disabled={sending}
+                className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:bg-accent-strong disabled:opacity-60"
+              >
+                {sending ? "Sending..." : (
+                  <>
+                    Send message <Send className="h-4 w-4" />
+                  </>
+                )}
+              </button>
+            </form>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
