@@ -25,6 +25,25 @@ export default function Contact() {
     const form = e.currentTarget;
     const fd = new FormData(form);
 
+    // 1. Honeypot check for bots (security trap)
+    const botTrap = String(fd.get("bot_check") || "").trim();
+    if (botTrap) {
+      toast.error("Spam detected.");
+      return;
+    }
+
+    // 2. Rate Limiting Check (60 seconds cooldown)
+    const COOLDOWN_TIME = 10 * 60 * 1000; // 60 seconds
+    const lastSubmitTime = localStorage.getItem("contact_last_submit");
+
+    if (lastSubmitTime) {
+      const timePassed = Date.now() - parseInt(lastSubmitTime, 10);
+      if (timePassed < COOLDOWN_TIME) {
+        const remainingSeconds = Math.ceil((COOLDOWN_TIME - timePassed) / 1000);
+        return toast.error(`Please wait ${remainingSeconds} second(s) before sending another message.`);
+      }
+    }
+
     const name = String(fd.get("name") || "").trim();
     const email = String(fd.get("email") || "").trim();
     const msg = String(fd.get("message") || "").trim();
@@ -37,7 +56,7 @@ export default function Contact() {
     setSending(true);
 
     // Web3Forms Key Append (FormData format)
-    const apiKey = import.meta.env.WEB3FORMS_KEY || "14b597b5-492b-4167-83cc-45ccb9322f1a";
+    const apiKey = import.meta.env.VITE_WEB3FORMS_KEY || "14b597b5-492b-4167-83cc-45ccb9322f1a";
     fd.append("access_key", apiKey);
 
     try {
@@ -50,6 +69,8 @@ export default function Contact() {
 
       if (result.success) {
         toast.success("Message sent. I'll get back to you shortly.");
+        // Save submit timestamp for rate limiting
+        localStorage.setItem("contact_last_submit", Date.now().toString());
         form.reset();
       } else {
         toast.error(result.message || "Failed to send message. Please try again.");
@@ -127,6 +148,9 @@ export default function Contact() {
 
           <Reveal delay={0.1}>
             <form onSubmit={onSubmit} className="rounded-xl border border-border bg-background p-6 sm:p-8">
+              {/* Hidden Honeypot Field for Bots */}
+              <input type="text" name="bot_check" tabIndex={-1} autoComplete="off" className="hidden" />
+
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field label="Name" name="name" placeholder="Your full name" maxLength={100} />
                 <Field label="Your Email" name="email" type="email" placeholder="you@company.com" maxLength={255} />
