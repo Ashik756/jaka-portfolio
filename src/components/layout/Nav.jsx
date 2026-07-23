@@ -59,11 +59,11 @@ export default function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 sm:px-6 lg:px-8 lg:py-4">
         <a href="#top" className="group flex items-center gap-2.5" aria-label="Tokay-Dendy home">
           <span className="relative grid h-8 w-8 place-items-center rounded-md border border-primary/40 bg-primary/10 font-mono text-sm font-semibold text-primary transition group-hover:border-primary group-hover:bg-primary/20">
-            T
+            J
             <span className="absolute -bottom-0.5 -right-0.5 h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_8px_hsl(var(--primary))]" />
           </span>
-          <span className="hidden font-mono text-sm font-semibold tracking-tight text-foreground sm:inline">
-            tokay<span className="text-primary">/</span>dendy
+          <span className=" font-mono text-sm font-semibold tracking-tight text-foreground">
+            Jakaria<span className="text-primary"> Sheikh Mahi</span>
           </span>
         </a>
 
