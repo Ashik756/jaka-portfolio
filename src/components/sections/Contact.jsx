@@ -37,7 +37,7 @@ export default function Contact() {
     setSending(true);
 
     // Web3Forms Key Append (FormData format)
-    const apiKey = import.meta.env.VITE_WEB3FORMS_KEY || "14b597b5-492b-4167-83cc-45ccb9322f1a";
+    const apiKey = import.meta.env.WEB3FORMS_KEY || "14b597b5-492b-4167-83cc-45ccb9322f1a";
     fd.append("access_key", apiKey);
 
     try {
