@@ -19,35 +19,60 @@ function Field({ label, className = "", ...props }) {
 
 export default function Contact() {
   const [sending, setSending] = useState(false);
-  const onSubmit = (e) => {
+
+  const onSubmit = async (e) => {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+
     const name = String(fd.get("name") || "").trim();
     const email = String(fd.get("email") || "").trim();
     const msg = String(fd.get("message") || "").trim();
+
     if (!name || name.length > 100) return toast.error("Please enter a valid name.");
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 255)
       return toast.error("Please enter a valid email.");
     if (!msg || msg.length > 1000) return toast.error("Please enter a message (max 1000 chars).");
+
     setSending(true);
-    const form = e.currentTarget;
-    setTimeout(() => {
+
+    // Web3Forms Key Append (FormData format)
+    const apiKey = import.meta.env.VITE_WEB3FORMS_KEY || "14b597b5-492b-4167-83cc-45ccb9322f1a";
+    fd.append("access_key", apiKey);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: fd
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Message sent. I'll get back to you shortly.");
+        form.reset();
+      } else {
+        toast.error(result.message || "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Network error. Could not send message.");
+    } finally {
       setSending(false);
-      form.reset();
-      toast.success("Message sent. I'll get back to you shortly.");
-    }, 900);
+    }
   };
+
   const info = [
-    { icon: Mail, label: "Email", value: "contact@tokaydendy.com", href: "mailto:contact@tokaydendy.com" },
-    { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-    { icon: MapPin, label: "Location", value: "New York, USA" },
-    { icon: MessageCircle, label: "WhatsApp", value: "+1 (555) 123-4567", href: "https://wa.me/15551234567" },
+    { icon: Mail, label: "Email", value: "scoutjakaria@gmail.com", href: "mailto:scoutjakaria@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+880 1859-662922", href: "tel:+880 1859-662922" },
+    { icon: MapPin, label: "Location", value: "Dhaka, Bangladesh" },
+    { icon: MessageCircle, label: "WhatsApp", value: "+880 1859-662922", href: "https://wa.link/mdkb53" },
   ];
   const socials = [
-    { icon: Linkedin, href: "https://linkedin.com/in/tokaydendy", label: "LinkedIn" },
-    { icon: Github, href: "https://github.com/tokaydendy", label: "GitHub" },
-    { icon: Facebook, href: "https://facebook.com/tokaydendy", label: "Facebook" },
+    { icon: Github, href: "https://github.com/mdjakariasheikhmahi", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/feed", label: "LinkedIn" },
+    { icon: Facebook, href: "https://www.facebook.com/mdjakariasheik0000", label: "Facebook" }
   ];
+
   return (
     <section id="contact" className="band relative bg-surface/30">
       <div className="mx-auto max-w-6xl px-6 py-24 sm:py-32 lg:px-8">
@@ -104,7 +129,7 @@ export default function Contact() {
             <form onSubmit={onSubmit} className="rounded-xl border border-border bg-background p-6 sm:p-8">
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field label="Name" name="name" placeholder="Your full name" maxLength={100} />
-                <Field label="Email" name="email" type="email" placeholder="you@company.com" maxLength={255} />
+                <Field label="Your Email" name="email" type="email" placeholder="you@company.com" maxLength={255} />
               </div>
               <Field className="mt-4" label="Subject" name="subject" placeholder="Project or inquiry" maxLength={150} />
               <div className="mt-4">
