@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Facebook, MapPin } from "lucide-react";
 import portrait from "../../assets/jakaria.png";
 import Reveal from "../ui/Reveal.jsx";
 import Counter from "../ui/Counter.jsx";
 import { TITLES, HERO_STATS } from "../../data/portfolio.js";
+import CV from "../../assets/Jakaria_Shekh_Mahi_CV.pdf"
 
 function Typed() {
   const [i, setI] = useState(0);
@@ -40,9 +41,9 @@ function Typed() {
 }
 
 const SOCIALS = [
-  { icon: Github, href: "https://github.com/tokaydendy", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/tokaydendy", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:contact@tokaydendy.com", label: "Email" },
+  { icon: Github, href: "https://github.com/mdjakariasheikhmahi", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/feed", label: "LinkedIn" },
+  { icon: Facebook, href: "https://www.facebook.com/mdjakariasheik0000", label: "Email" },
 ];
 
 const HIGHLIGHTS = [
@@ -69,14 +70,14 @@ export default function Hero() {
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
                 </span>
                 <span className="mono-label text-[0.65rem]! text-ink-2!">
-                  Available for engagements — Q1 2026
+                  Available for engagements — Q3 2026
                 </span>
               </div>
             </Reveal>
 
             <Reveal delay={0.05}>
               <h1 className="mt-8 font-display text-5xl leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-[4.5rem]">
-                Tokay<span className="text-primary">—</span>Dendy
+                Jakaria<span className="text-primary">—</span>Sheikh
               </h1>
             </Reveal>
 
@@ -132,7 +133,7 @@ export default function Hero() {
                   View services
                 </motion.a>
                 <a
-                  href="#"
+                  href={CV}
                   className="group inline-flex items-center gap-2 rounded-md px-2 py-2.5 text-sm font-medium text-ink-2 transition hover:text-foreground"
                 >
                   <Download className="h-4 w-4 transition group-hover:-translate-y-0.5" />
@@ -160,7 +161,7 @@ export default function Hero() {
                 </div>
                 <div className="h-5 w-px bg-border" />
                 <div className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-ink-3">
-                  <MapPin className="h-3 w-3" /> New York, USA
+                  <MapPin className="h-3 w-3" /> Dhaka, Bangladesh
                 </div>
               </div>
             </Reveal>
@@ -194,13 +195,7 @@ export default function Hero() {
                     Online
                   </div>
                 </div>
-              </motion.div>
-              <div className="absolute -left-3 -top-3 hidden font-mono text-[10px] uppercase tracking-widest text-ink-3 sm:block">
-                ./portrait.jpg
-              </div>
-              <div className="absolute -right-3 -bottom-3 hidden font-mono text-[10px] uppercase tracking-widest text-ink-3 sm:block">
-                uptime · 99.98%
-              </div>
+              </motion.div>            
             </div>
           </Reveal>
         </div>

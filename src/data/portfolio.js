@@ -13,7 +13,7 @@ export const HERO_STATS = [
   { n: 6, s: "+", l: "Years exp." },
   { n: 120, s: "+", l: "Projects" },
   { n: 80, s: "+", l: "Clients" },
-  { n: 15, s: "+", l: "Countries" },
+  { n: 5, s: "+", l: "Countries" },
 ];
 
 export const SKILL_GROUPS = [
