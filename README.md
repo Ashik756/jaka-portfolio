@@ -1,16 +1,46 @@
-# React + Vite
+# 🚀 Personal Portfolio & Network Infrastructure Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance personal portfolio website built with **React**, **Vite**, and **Tailwind CSS**. Designed to highlight professional experience and expertise in IT & Network Infrastructure, ISP Backbone Architecture, and Enterprise Security.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [jakaria-sheikh-mahi.vercel.app](https://jakaria-sheikh-mahi.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 👨‍💻 Profile Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Jakaria Shekh Mahi**  
+*IT & Network Infrastructure Specialist | MikroTik Certified Engineer | ISP Backbone Architect*
 
-## Expanding the ESLint configuration
+- 📧 **Email:** scoutjakaria@gmail.com
+- 📞 **Phone:** +880 1859-662922
+- 🔗 **LinkedIn:** [linkedin.com/in/jakariasheikhmahi](https://www.linkedin.com/in/jakariasheikhmahi)
+- 🐙 **GitHub:** [github.com/mdjakariasheikhmahi](https://github.com/mdjakariasheikhmahi)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features & Capabilities
+
+- **Modern & Responsive UI:** Clean, scalable, and fully responsive design built with Tailwind CSS.
+- **Interactive Contact Form:** Production-ready contact integration with **Web3Forms API** for instant email notifications.
+- **Project Showcase:** Highlights major networking projects (ISP Backbone, Enterprise VPNs, Firewall Security, Campus Wi-Fi).
+- **Core Competencies & Certifications:** Structured presentation of technical skills (MikroTik RouterOS, BGP, OSPF, Linux, Cloud) and official certifications (MTCNA, CCNA, Linux Essentials, AWS).
+- **Smooth Animations:** Integrated UI feedback using `sonner` toasts and dynamic vector icons via `lucide-react`.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework:** React.js + Vite
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Toast Notifications:** Sonner
+- **Form Service:** Web3Forms API
+- **Hosting & Deployment:** Vercel
+
+---
+
+## 🔒 Copyright & License
+
+© **Jakaria Shekh Mahi**. All rights reserved.
+
+This is a personal portfolio repository. The source code, design, and personal content are non-transferable and intended solely for showcase purposes.
