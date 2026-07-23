@@ -1,0 +1,7 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Host & Sitemap location
+Host: https://jakaria-sheikh-mahi.vercel.app/
+Sitemap: https://jakaria-sheikh-mahi.vercel.app/sitemap.xml
