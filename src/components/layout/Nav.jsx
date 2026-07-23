@@ -103,7 +103,7 @@ export default function Nav() {
         </div>
 
         <button
-          className="relative grid h-9 w-9 place-items-center rounded-md border border-border bg-surface/60 text-foreground transition hover:border-primary/40 lg:hidden"
+          className="relative z-50 grid h-9 w-9 place-items-center rounded-md border border-border bg-surface/60 text-foreground transition hover:border-primary/40 lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
@@ -142,14 +142,15 @@ export default function Nav() {
         />
       </div>
 
+      {/* Mobile Navigation Drawer */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-14.25 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur-xl lg:hidden"
+            className="fixed inset-x-0 top-14.25 h-[calc(100vh-57px)] z-40 overflow-y-auto bg-background border-t border-border px-5 py-6 lg:hidden"
           >
             <motion.nav
               initial="hidden"
@@ -158,7 +159,7 @@ export default function Nav() {
                 hidden: {},
                 show: { transition: { staggerChildren: 0.04 } },
               }}
-              className="flex flex-col gap-1 px-5 py-6"
+              className="flex flex-col gap-1.5"
               aria-label="Mobile"
             >
               {NAV.map((n) => {
