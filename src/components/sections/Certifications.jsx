@@ -29,7 +29,7 @@ export default function Certifications() {
                 <div className="mt-10">
                   
                   <div className="flex items-start justify-between gap-2">
-                    <div className="font-display text-[15px] font-semibold leading-snug text-foreground">
+                    <div className="font-display text-xl font-semibold leading-snug text-foreground">
                       {c.name}
                     </div>
                     {c.link && (

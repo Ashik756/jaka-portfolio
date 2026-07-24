@@ -17,30 +17,42 @@ export const HERO_STATS = [
 ];
 
 export const SKILL_GROUPS = [
-  { title: "Networking", icon: Network, items: [
-    { name: "MikroTik RouterOS", level: 95 }, { name: "BGP", level: 90 },
-    { name: "OSPF", level: 92 }, { name: "MPLS", level: 85 },
-    { name: "VLAN / STP", level: 90 }, { name: "VPN / Routing / QoS", level: 88 },
-  ]},
-  { title: "Security", icon: ShieldCheck, items: [
-    { name: "Firewall Configuration", level: 92 }, { name: "VPN Security", level: 90 },
-    { name: "Access Control", level: 85 }, { name: "IDS / IPS", level: 80 },
-  ]},
-  { title: "Servers", icon: Server, items: [
-    { name: "Linux Administration", level: 88 }, { name: "Windows Server", level: 82 },
-    { name: "DNS / DHCP", level: 90 }, { name: "Web Hosting", level: 80 },
-  ]},
-  { title: "Cloud", icon: Cloud, items: [
-    { name: "AWS Basics", level: 70 }, { name: "Azure Basics", level: 65 }, { name: "Cloud Networking", level: 78 },
-  ]},
-  { title: "Monitoring", icon: Activity, items: [
-    { name: "Zabbix", level: 88 }, { name: "Grafana", level: 82 },
-    { name: "The Dude / Winbox", level: 92 }, { name: "Wireshark / PRTG", level: 80 },
-  ]},
-  { title: "Soft Skills", icon: Cpu, items: [
-    { name: "Problem Solving", level: 95 }, { name: "Communication", level: 90 },
-    { name: "Project Management", level: 85 }, { name: "Client Support", level: 92 },
-  ]},
+  {
+    title: "Networking", icon: Network, items: [
+      { name: "MikroTik RouterOS", level: 95 }, { name: "BGP", level: 90 },
+      { name: "OSPF", level: 92 }, { name: "MPLS", level: 85 },
+      { name: "VLAN / STP", level: 90 }, { name: "VPN / Routing / QoS", level: 88 },
+    ]
+  },
+  {
+    title: "Security", icon: ShieldCheck, items: [
+      { name: "Firewall Configuration", level: 92 }, { name: "VPN Security", level: 90 },
+      { name: "Access Control", level: 85 }, { name: "IDS / IPS", level: 80 },
+    ]
+  },
+  {
+    title: "Servers", icon: Server, items: [
+      { name: "Linux Administration", level: 88 }, { name: "Windows Server", level: 82 },
+      { name: "DNS / DHCP", level: 90 }, { name: "Web Hosting", level: 80 },
+    ]
+  },
+  {
+    title: "Cloud", icon: Cloud, items: [
+      { name: "AWS Basics", level: 70 }, { name: "Azure Basics", level: 65 }, { name: "Cloud Networking", level: 78 },
+    ]
+  },
+  {
+    title: "Monitoring", icon: Activity, items: [
+      { name: "Zabbix", level: 88 }, { name: "Grafana", level: 82 },
+      { name: "The Dude / Winbox", level: 92 }, { name: "Wireshark / PRTG", level: 80 },
+    ]
+  },
+  {
+    title: "Soft Skills", icon: Cpu, items: [
+      { name: "Problem Solving", level: 95 }, { name: "Communication", level: 90 },
+      { name: "Project Management", level: 85 }, { name: "Client Support", level: 92 },
+    ]
+  },
 ];
 
 export const SERVICES = [
@@ -76,7 +88,7 @@ export const EXPERIENCE = [
     org: "Dot Internet",
     period: "2024 — 2026",
     icon: Briefcase,
-    bullets: ["Customer network support & router config", "Internet Troubleshooting Support", "Facebook, WhatsApp, Instagram Message Handling","Social Media Management"],
+    bullets: ["Customer network support & router config", "Internet Troubleshooting Support", "Facebook, WhatsApp, Instagram Message Handling", "Social Media Management"],
   },
 ];
 
@@ -88,19 +100,19 @@ export const EDUCATION = [
     note: "Networks · OS · Cyber Security · Network Admin",
     icon: GraduationCap
   },
-  { 
+  {
     title: "Higher Secondary Certificate (HSC)",
     org: "Dhaka Udyan Govt. College, Dhaka",
     period: "2023 - 2024",
     note: "Science",
-    icon: GraduationCap 
+    icon: GraduationCap
   },
-  { 
+  {
     title: "Secondary School Certificate (SSC)",
     org: "Gobindaganj Government High School",
     period: "2021 - 2022",
     note: "Science",
-    icon: GraduationCap 
+    icon: GraduationCap
   },
 ];
 
@@ -111,9 +123,40 @@ export const TESTIMONIALS = [
 ];
 
 export const CERTS = [
-  { name: "MikroTik MTCNA", org: "MikroTik", date: "25 Jun 2026", link:"https://drive.google.com/file/d/1jkxXhsRAgvdT2h5LnvvMQ1tehDr0Mn4w/view?ts=6a637d18" },
-  { name: "Cisco CCNA", org: "Cisco Networking Academy", date: "15 Jan 2024", link:"https://drive.google.com/file/d/1aZ9QY3fQikxAwUsxGLsk02K0SZ4tdSnv/view?ts=6a637cb1" },
-  { name: "Linux Essentials", org: "Linux Professional Institute", date: "10 Nov 2023", link:"https://drive.google.com/file/d/1aZ9QY3fQikxAwUsxGLsk02K0SZ4tdSnv/view?ts=6a637cb1" },
-  { name: "AWS Cloud Practitioner", org: "Amazon Web Services", date: "05 Aug 2023", link:"https://drive.google.com/file/d/1aZ9QY3fQikxAwUsxGLsk02K0SZ4tdSnv/view?ts=6a637cb1" },
-  { name: "Fortinet NSE Level 1", org: "Fortinet", date: "12 Mar 2023", link:"https://drive.google.com/file/d/1aZ9QY3fQikxAwUsxGLsk02K0SZ4tdSnv/view?ts=6a637cb1" },
+  {
+    name: "Computer Office Application",
+    org: "Microsoft",
+    date: "19 April 2022",
+    link: "https://i.ibb.co.com/wr2Mhcf3/Cartificate1-24-06-2026220437201.jpg"
+  },
+  {
+    name: "MikroTik MTCNA",
+    org: "MikroTik",
+    date: "24 July 2026",
+    link: "https://mikrotik.com/training/certificates/c750612c16285e2b8855"
+  },
+  {
+    name: "Cisco CCNA",
+    org: "Cisco Networking Academy",
+    date: "Learning...",
+    link: ""
+  },
+  {
+    name: "Server Administration (Windows/Linux)",
+    org: "Windows/Linux Professional Institute",
+    date: "Learning...",
+    link: ""
+  },
+  {
+    name: "AWS Cloud Practitioner",
+    org: "Amazon Web Services",
+    date: "Learning...",
+    link: ""
+  },
+  {
+    name: "Fortinet NSE Level 1",
+    org: "Fortinet",
+    date: "Learning...",
+    link: ""
+  },
 ];
