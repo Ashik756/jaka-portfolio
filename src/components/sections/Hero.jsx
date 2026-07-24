@@ -41,9 +41,9 @@ function Typed() {
 }
 
 const SOCIALS = [
-  { icon: Github, href: "https://github.com/mdjakariasheikhmahi", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/mdjakariasheikhmahi", label: "LinkedIn" },
   { icon: Facebook, href: "https://www.facebook.com/mdjakariasheik0000", label: "Email" },
+  { icon: Github, href: "https://github.com/mdjakariasheikhmahi", label: "GitHub" },
 ];
 
 const HIGHLIGHTS = [
@@ -77,7 +77,7 @@ export default function Hero() {
 
             <Reveal delay={0.05}>
               <h1 className="mt-8 font-display text-5xl leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-[4.5rem]">
-                Jakaria<span className="text-primary">—</span>Sheikh
+                Jakaria<span className="text-primary">—</span>Sheikh Mahi
               </h1>
             </Reveal>
 
@@ -179,7 +179,7 @@ export default function Hero() {
               >
                 <img
                   src={portrait}
-                  alt="Tokay-Dendy, IT and Network Infrastructure Specialist"
+                  alt="Jakaria Sheikh Mahi, IT and Network Infrastructure Specialist"
                   width={512}
                   height={640}
                   className="h-full w-full object-cover grayscale-15 transition duration-700 hover:grayscale-0 hover:scale-[1.02]"

@@ -62,7 +62,7 @@ export default function Nav() {
             J
             <span className="absolute -bottom-0.5 -right-0.5 h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_8px_hsl(var(--primary))]" />
           </span>
-          <span className=" font-mono text-sm font-semibold tracking-tight text-foreground">
+          <span className=" font-mono text-lg font-semibold tracking-tight text-foreground">
             Jakaria<span className="text-primary"> Sheikh Mahi</span>
           </span>
         </a>

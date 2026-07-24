@@ -91,7 +91,7 @@ export default function Contact() {
     { icon: Linkedin, href: "https://www.linkedin.com/feed", label: "LinkedIn" },
     { icon: MessageCircle , href: "https://wa.me/message/WY4G277BNEXPL1", label: "WhatsApp" },
     { icon: Facebook, href: "https://www.facebook.com/mdjakariasheikhmahi", label: "Facebook" }, 
-    { icon: Youtube , href: "https://www.youtube.com/@MdJakariaSheikhMahi", label: "WhatsApp" },
+    { icon: Youtube , href: "https://www.youtube.com/@MdJakariaSheikhMahi", label: "Youtube" },
     { icon: Github, href: "https://github.com/mdjakariasheikhmahi", label: "GitHub" },
   ];
 
