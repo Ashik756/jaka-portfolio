@@ -94,8 +94,8 @@ export default function Hero() {
                 and businesses — from{" "}
                 <span className="text-foreground">MikroTik</span> edge routers
                 to enterprise{" "}
-                <span className="text-foreground">BGP backbones</span>. Six
-                years turning complex infrastructure into calm, reliable
+                <span className="text-foreground">BGP backbones</span>. One
+                year turning complex infrastructure into calm, reliable
                 uptime.
               </p>
             </Reveal>
@@ -179,16 +179,16 @@ export default function Hero() {
               >
                 <img
                   src={portrait}
-                  alt="Jakaria Sheikh Mahi, IT and Network Infrastructure Specialist"
+                  alt="Jakaria Sheikh, IT and Network Infrastructure Specialist"
                   width={512}
                   height={640}
-                  className="h-full w-full object-cover grayscale-15 transition duration-700 hover:grayscale-0 hover:scale-[1.02]"
+                  className="h-full w-full object-cover grayscale-15 transition duration-700 hover:scale-[1.02]"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-background/90 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
                   <div>
                     <div className="mono-label text-[0.6rem]! text-ink-2!">Role</div>
-                    <div className="font-mono text-sm text-foreground">Network Specialist</div>
+                    <div className="font-mono text-sm text-foreground">Network Engineer</div>
                   </div>
                   <div className="inline-flex items-center gap-1.5 rounded-md border border-primary/40 bg-primary/10 px-2 py-1 text-[10px] font-mono uppercase tracking-wider text-primary">
                     <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
@@ -201,7 +201,7 @@ export default function Hero() {
         </div>
 
         <Reveal delay={0.3}>
-          <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-4">
+          <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3 ">
             {HERO_STATS.map((s) => (
               <div
                 key={s.l}

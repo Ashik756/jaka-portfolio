@@ -5,15 +5,15 @@ import {
 
 export const TITLES = [
   "IT & Network Infrastructure Specialist",
-  "MikroTik Certified Engineer",
+  "MikroTik Certified Routing Engineer",
   "ISP Backbone Architect",
 ];
 
 export const HERO_STATS = [
-  { n: 6, s: "+", l: "Years exp." },
-  { n: 120, s: "+", l: "Projects" },
-  { n: 80, s: "+", l: "Clients" },
-  { n: 5, s: "+", l: "Countries" },
+  { n: 1, s: "+", l: "Years exp." },
+  { n: 60, s: "+", l: "Projects" },
+  { n: 20, s: "+", l: "Clients" },
+  // { n: 2, s: "+", l: "Countries" },
 ];
 
 export const SKILL_GROUPS = [
@@ -65,25 +65,43 @@ export const PROJECTS = [
 
 export const EXPERIENCE = [
   {
-    role: "Senior Network Engineer",
-    org: "ABC Internet Services Ltd.",
-    period: "2023 — Present",
+    role: "Network Engineer",
+    org: "---",
+    period: "2026 — Present",
     icon: Briefcase,
     bullets: ["MikroTik router configuration & ISP deployment", "OSPF, BGP, MPLS, VPN setup", "Traffic optimization & troubleshooting"],
   },
   {
-    role: "Network Support Engineer",
-    org: "NextWave Communications",
-    period: "2021 — 2023",
+    role: "Social Media Moderator & Customer Support Executive",
+    org: "Dot Internet",
+    period: "2024 — 2026",
     icon: Briefcase,
-    bullets: ["Customer network support & router config", "Wireless deployment & monitoring", "Firewall configuration"],
+    bullets: ["Customer network support & router config", "Internet Troubleshooting Support", "Facebook, WhatsApp, Instagram Message Handling","Social Media Management"],
   },
 ];
 
 export const EDUCATION = [
-  { title: "B.Sc. in Computer Science", org: "University of Technology", period: "2017 — 2021", note: "Networks · OS · Cyber Security · Network Admin", icon: GraduationCap },
-  { title: "MikroTik Certified Network Associate (MTCNA)", org: "MikroTik Academy", period: "2022", note: "Routing, wireless, firewall, QoS", icon: GraduationCap },
-  { title: "Cisco Certified Network Associate (CCNA)", org: "Cisco Networking Academy", period: "2023", note: "Enterprise routing & switching", icon: GraduationCap },
+  {
+    title: "B.Sc. in Computer Science",
+    org: "  European University of Bangladesh",
+    period: "2025 — 2028",
+    note: "Networks · OS · Cyber Security · Network Admin",
+    icon: GraduationCap
+  },
+  { 
+    title: "Higher Secondary Certificate (HSC)",
+    org: "Dhaka Udyan Govt. College, Dhaka",
+    period: "2023 - 2024",
+    note: "Science",
+    icon: GraduationCap 
+  },
+  { 
+    title: "Secondary School Certificate (SSC)",
+    org: "Gobindaganj Government High School",
+    period: "2021 - 2022",
+    note: "Science",
+    icon: GraduationCap 
+  },
 ];
 
 export const TESTIMONIALS = [
