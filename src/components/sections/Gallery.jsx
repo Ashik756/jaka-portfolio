@@ -6,7 +6,7 @@ import SectionLabel from "../ui/SectionLabel.jsx";
 import { PROJECTS } from "../../data/portfolio.js";
 
 export default function Gallery() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <section id="gallery" className="band relative">
