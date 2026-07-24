@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ImageIcon } from "lucide-react";
 import Reveal from "../ui/Reveal.jsx";
 import SectionLabel from "../ui/SectionLabel.jsx";
-import { PROJECTS } from "../../data/portfolio.js";
+import { GPIC } from "../../data/portfolio.js";
 
 export default function Gallery() {
   const [open, setOpen] = useState(true);
@@ -43,20 +43,28 @@ export default function Gallery() {
               className="overflow-hidden"
             >
               <div className="mt-12 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-                {PROJECTS.map((p, i) => (
-                  <figure key={p.title} className="group relative bg-background">
+                {GPIC && GPIC.map((item, i) => (
+                  <figure key={i} className="group relative bg-background">
                     <div className="relative aspect-4/3 w-full overflow-hidden bg-surface">
-                      <div className="absolute inset-0 grid-bg opacity-70" />
-                      <div className="absolute inset-0 grid place-items-center">
-                        <ImageIcon className="h-8 w-8 text-ink-3 transition group-hover:scale-110 group-hover:text-primary" />
-                      </div>
-                      <div className="absolute left-3 top-3 font-mono text-[10px] text-ink-3">
+                      <div className="absolute inset-0 grid-bg opacity-30 z-10 pointer-events-none" />
+                      
+                      {/* Image Component */}
+                      <img
+                        src={item.image?.trim()}
+                        alt={item.tag || "Gallery image"}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      />
+
+                      {/* Image Index Number */}
+                      <div className="absolute left-3 top-3 font-mono text-[10px] text-foreground/80 bg-background/60 backdrop-blur-md px-2 py-0.5 rounded border border-border/40 z-20">
                         {String(i + 1).padStart(2, "0")}
                       </div>
                     </div>
+
                     <figcaption className="flex items-center justify-between border-t border-border px-5 py-4">
-                      <span className="mono-label text-[0.6rem]! text-primary!">{p.tag}</span>
-                      <span className="font-mono text-xs text-ink-2">{p.metric}</span>
+                      <span className="mono-label text-[0.6rem]! text-primary!">{item.tag}</span>
                     </figcaption>
                   </figure>
                 ))}

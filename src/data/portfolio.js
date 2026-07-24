@@ -160,3 +160,20 @@ export const CERTS = [
     link: ""
   },
 ];
+
+
+export const GPIC=[
+  {
+    tag: "Hangout",
+    image:"https://i.ibb.co.com/FQqcqY0/pic3.jpg"
+  },
+  {
+    tag: "Meet up",
+    image:"https://i.ibb.co.com/ksGM01ZM/pic1.jpg"
+  },
+  {
+    tag: "Tour",
+    image:"https://i.ibb.co.com/RZH7G1y/pic2.jpg"
+  },
+  
+]
