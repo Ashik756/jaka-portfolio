@@ -93,9 +93,9 @@ export const TESTIMONIALS = [
 ];
 
 export const CERTS = [
-  { name: "MikroTik MTCNA", org: "MikroTik" },
-  { name: "Cisco CCNA", org: "Cisco Networking Academy" },
-  { name: "Linux Essentials", org: "Linux Professional Institute" },
-  { name: "AWS Cloud Practitioner", org: "Amazon Web Services" },
-  { name: "Fortinet NSE Level 1", org: "Fortinet" },
+  { name: "MikroTik MTCNA", org: "MikroTik", date: "25 Jun 2026", link:"https://drive.google.com/file/d/1jkxXhsRAgvdT2h5LnvvMQ1tehDr0Mn4w/view?ts=6a637d18" },
+  { name: "Cisco CCNA", org: "Cisco Networking Academy", date: "15 Jan 2024", link:"https://drive.google.com/file/d/1aZ9QY3fQikxAwUsxGLsk02K0SZ4tdSnv/view?ts=6a637cb1" },
+  { name: "Linux Essentials", org: "Linux Professional Institute", date: "10 Nov 2023", link:"https://drive.google.com/file/d/1aZ9QY3fQikxAwUsxGLsk02K0SZ4tdSnv/view?ts=6a637cb1" },
+  { name: "AWS Cloud Practitioner", org: "Amazon Web Services", date: "05 Aug 2023", link:"https://drive.google.com/file/d/1aZ9QY3fQikxAwUsxGLsk02K0SZ4tdSnv/view?ts=6a637cb1" },
+  { name: "Fortinet NSE Level 1", org: "Fortinet", date: "12 Mar 2023", link:"https://drive.google.com/file/d/1aZ9QY3fQikxAwUsxGLsk02K0SZ4tdSnv/view?ts=6a637cb1" },
 ];

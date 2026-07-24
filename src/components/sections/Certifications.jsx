@@ -1,4 +1,4 @@
-import { ShieldCheck } from "lucide-react";
+import { ShieldCheck, ArrowUpRight } from "lucide-react";
 import Reveal from "../ui/Reveal.jsx";
 import SectionLabel from "../ui/SectionLabel.jsx";
 import { CERTS } from "../../data/portfolio.js";
@@ -25,11 +25,34 @@ export default function Certifications() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
+
                 <div className="mt-10">
-                  <div className="font-display text-[15px] font-semibold leading-snug text-foreground">
-                    {c.name}
+                  
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="font-display text-[15px] font-semibold leading-snug text-foreground">
+                      {c.name}
+                    </div>
+                    {c.link && (
+                      <a
+                        href={c.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex shrink-0 items-center gap-0.5 font-mono text-xs text-primary transition-opacity hover:opacity-80 hover:underline"
+                        title="View Certificate"
+                      >
+                        <span>View</span>
+                        <ArrowUpRight className="h-3 w-3" />
+                      </a>
+                    )}
                   </div>
+
                   <div className="mono-label mt-2 text-[0.6rem]!">{c.org}</div>
+
+                  {c.date && (
+                    <div className="mt-3 font-mono text-[11px] text-ink-3">
+                      {c.date}
+                    </div>
+                  )}
                 </div>
               </div>
             </Reveal>
