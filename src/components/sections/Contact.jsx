@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { toast } from "sonner";
-import { Mail, Phone, MapPin, MessageCircle, Linkedin, Github, Facebook, Send } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Linkedin, Github, Facebook, Send, Youtube  } from "lucide-react";
 import Reveal from "../ui/Reveal.jsx";
 import SectionLabel from "../ui/SectionLabel.jsx";
 
@@ -83,15 +83,16 @@ export default function Contact() {
   };
 
   const info = [
-    { icon: Mail, label: "Email", value: "scoutjakaria@gmail.com", href: "mailto:scoutjakaria@gmail.com" },
-    { icon: Phone, label: "Phone", value: "+880 1859-662922", href: "tel:+880 1859-662922" },
+    { icon: Mail, label: "Email", value: "mdjakariasheikhmahi@gmail.com", href: "mailto:mdjakariasheikhmahi@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+880 1570-222364", href: "tel:+880 1570-222364" },
     { icon: MapPin, label: "Location", value: "Dhaka, Bangladesh" },
-    { icon: MessageCircle, label: "WhatsApp", value: "+880 1859-662922", href: "https://wa.link/mdkb53" },
   ];
   const socials = [
-    { icon: Github, href: "https://github.com/mdjakariasheikhmahi", label: "GitHub" },
     { icon: Linkedin, href: "https://www.linkedin.com/feed", label: "LinkedIn" },
-    { icon: Facebook, href: "https://www.facebook.com/mdjakariasheik0000", label: "Facebook" }
+    { icon: MessageCircle , href: "https://wa.me/message/WY4G277BNEXPL1", label: "WhatsApp" },
+    { icon: Facebook, href: "https://www.facebook.com/mdjakariasheikhmahi", label: "Facebook" }, 
+    { icon: Youtube , href: "https://www.youtube.com/@MdJakariaSheikhMahi", label: "WhatsApp" },
+    { icon: Github, href: "https://github.com/mdjakariasheikhmahi", label: "GitHub" },
   ];
 
   return (

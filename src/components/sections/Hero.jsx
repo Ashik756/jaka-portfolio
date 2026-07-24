@@ -42,7 +42,7 @@ function Typed() {
 
 const SOCIALS = [
   { icon: Github, href: "https://github.com/mdjakariasheikhmahi", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/feed", label: "LinkedIn" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/mdjakariasheikhmahi", label: "LinkedIn" },
   { icon: Facebook, href: "https://www.facebook.com/mdjakariasheik0000", label: "Email" },
 ];
 
