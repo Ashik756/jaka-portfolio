@@ -164,6 +164,10 @@ export const CERTS = [
 
 export const GPIC=[
   {
+    tag: "Happy moment",
+    image:"https://i.ibb.co.com/s9vNHd4J/new-copy1.png"
+  },
+  {
     tag: "Exam time",
     image:"https://i.ibb.co.com/FQqcqY0/pic3.jpg"
   },
@@ -174,9 +178,5 @@ export const GPIC=[
   {
     tag: "Tour",
     image:"https://i.ibb.co.com/RZH7G1y/pic2.jpg"
-  },
-  {
-    tag: "Happy moment",
-    image:"https://i.ibb.co.com/s9vNHd4J/new-copy1.png"
   },
 ]
