@@ -56,11 +56,6 @@ export default function Gallery() {
                         decoding="async"
                         className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                       />
-
-                      {/* Image Index Number */}
-                      <div className="absolute left-3 top-3 font-mono text-[10px] text-foreground/80 bg-background/60 backdrop-blur-md px-2 py-0.5 rounded border border-border/40 z-20">
-                        {String(i + 1).padStart(2, "0")}
-                      </div>
                     </div>
 
                     <figcaption className="flex items-center justify-between border-t border-border px-5 py-4">
