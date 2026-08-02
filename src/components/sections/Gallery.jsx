@@ -42,7 +42,7 @@ export default function Gallery() {
               transition={{ duration: 0.35, ease: "easeInOut" }}
               className="overflow-hidden"
             >
-              <div className="mt-12 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-12 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
                 {GPIC && GPIC.map((item, i) => (
                   <figure key={i} className="group relative bg-background">
                     <div className="relative aspect-4/3 w-full overflow-hidden bg-surface">
