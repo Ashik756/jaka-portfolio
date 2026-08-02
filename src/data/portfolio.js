@@ -130,26 +130,26 @@ export const CERTS = [
     link: "https://i.ibb.co.com/wr2Mhcf3/Cartificate1-24-06-2026220437201.jpg"
   },
   {
-    name: "MikroTik MTCNA",
-    org: "MikroTik",
+    name: "MTCNA",
+    org: "MikroTik Academy",
     date: "24 July 2026",
     link: "https://mikrotik.com/training/certificates/c750612c16285e2b8855"
   },
   {
-    name: "Cisco CCNA",
+    name: "MTCRE",
+    org: "MikroTik Academy",
+    date: "31 July 2026",
+    link: "https://mikrotik.com/training/certificates/c752312c83c036fa0d49"
+  },
+  {
+    name: "MTCSE",
+    org: "MikroTik Academy",
+    date: "Learning...",
+    link: ""
+  },
+  {
+    name: "CCNA",
     org: "Cisco Networking Academy",
-    date: "Learning...",
-    link: ""
-  },
-  {
-    name: "Server Administration (Windows/Linux)",
-    org: "Windows/Linux Professional Institute",
-    date: "Learning...",
-    link: ""
-  },
-  {
-    name: "AWS Cloud Practitioner",
-    org: "Amazon Web Services",
     date: "Learning...",
     link: ""
   },

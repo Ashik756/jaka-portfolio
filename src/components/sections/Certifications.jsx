@@ -15,7 +15,7 @@ export default function Certifications() {
             Credentials that back the <span className="text-primary">work</span>.
           </h2>
         </Reveal>
-        <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {CERTS.map((c, i) => (
             <Reveal key={c.name} delay={(i % 5) * 0.04}>
               <div className="flex h-full flex-col justify-between bg-background p-6 transition hover:bg-surface">
