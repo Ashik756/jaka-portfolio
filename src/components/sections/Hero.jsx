@@ -94,7 +94,7 @@ export default function Hero() {
                 and businesses — from{" "}
                 <span className="text-foreground">MikroTik</span> edge routers
                 to enterprise{" "}
-                <span className="text-foreground">BGP backbones</span>. One
+                <span className="text-foreground">OSPF backbones</span>. One
                 year turning complex infrastructure into calm, reliable
                 uptime.
               </p>

@@ -7,6 +7,7 @@ export const TITLES = [
   "IT & Network Infrastructure Specialist",
   "MikroTik Certified Routing Engineer",
   "ISP Backbone Architect",
+  "MikroTik Certified Security Engineer",
 ];
 
 export const HERO_STATS = [
@@ -77,7 +78,7 @@ export const PROJECTS = [
 
 export const EXPERIENCE = [
   {
-    role: "Network Engineer",
+    role: "Support Engineer",
     org: "---",
     period: "2026 — Present",
     icon: Briefcase,
@@ -124,39 +125,39 @@ export const TESTIMONIALS = [
 
 export const CERTS = [
   {
-    name: "Computer Office Application",
+    name: "Microsoft Office",
     org: "Microsoft",
-    date: "19 April 2022",
+    certID: "19 April 2022",
     link: "https://i.ibb.co.com/wr2Mhcf3/Cartificate1-24-06-2026220437201.jpg"
   },
   {
     name: "MTCNA",
     org: "MikroTik Academy",
-    date: "24 July 2026",
+    certID: "Certificate ID : 2607NA0612",
     link: "https://mikrotik.com/training/certificates/c750612c16285e2b8855"
   },
   {
     name: "MTCRE",
     org: "MikroTik Academy",
-    date: "31 July 2026",
+    certID: "Certificate ID  : 2607RE2312",
     link: "https://mikrotik.com/training/certificates/c752312c83c036fa0d49"
   },
   {
     name: "MTCSE",
     org: "MikroTik Academy",
-    date: "13 August 2026",
+    certID: "Certificate ID  : 2608SE3842",
     link: "https://mikrotik.com/training/certificates/c753842ccb1d5f8f29b3"
   },
   {
     name: "CCNA",
     org: "Cisco Networking Academy",
-    date: "Learning...",
+    certID: "Learning...",
     link: ""
   },
   {
     name: "Fortinet NSE Level 1",
     org: "Fortinet",
-    date: "Learning...",
+    certID: "Learning...",
     link: ""
   },
 ];

@@ -29,7 +29,7 @@ export default function Certifications() {
                 <div className="mt-10">
                   
                   <div className="flex items-start justify-between gap-2">
-                    <div className="font-display text-xl font-semibold leading-snug text-foreground">
+                    <div className="font-display text-3xl font-semibold leading-snug text-foreground ">
                       {c.name}
                     </div>
                     {c.link && (
@@ -48,9 +48,9 @@ export default function Certifications() {
 
                   <div className="mono-label mt-2 text-[0.6rem]!">{c.org}</div>
 
-                  {c.date && (
+                  {c.certID && (
                     <div className="mt-3 font-mono text-[11px] text-ink-3">
-                      {c.date}
+                      {c.certID}
                     </div>
                   )}
                 </div>
