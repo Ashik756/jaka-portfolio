@@ -144,8 +144,8 @@ export const CERTS = [
   {
     name: "MTCSE",
     org: "MikroTik Academy",
-    date: "Learning...",
-    link: ""
+    date: "13 August 2026",
+    link: "https://mikrotik.com/training/certificates/c753842ccb1d5f8f29b3"
   },
   {
     name: "CCNA",
