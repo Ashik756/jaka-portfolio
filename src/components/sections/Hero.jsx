@@ -134,6 +134,7 @@ export default function Hero() {
                 </motion.a>
                 <a
                   href={CV}
+                  target="_blank"
                   className="group inline-flex items-center gap-2 rounded-md px-2 py-2.5 text-sm font-medium text-ink-2 transition hover:text-foreground"
                 >
                   <Download className="h-4 w-4 transition group-hover:-translate-y-0.5" />

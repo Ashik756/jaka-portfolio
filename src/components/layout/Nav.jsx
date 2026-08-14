@@ -103,7 +103,7 @@ export default function Nav() {
         </div>
 
         <button
-          className="relative z-50 grid h-9 w-9 place-items-center rounded-md border border-border bg-surface/60 text-foreground transition hover:border-primary/40 lg:hidden"
+          className="relative z-50 grid h-9 w-9 place-items-center rounded-md border border-border bg-surface/60 text-foreground transition hover:border-primary/40 lg:hidden cursor-pointer"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}

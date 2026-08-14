@@ -83,7 +83,7 @@ export default function Contact() {
   };
 
   const info = [
-    { icon: Mail, label: "Email", value: "mdjakariasheikhmahi@gmail.com", href: "mailto:mdjakariasheikhmahi@gmail.com" },
+    { icon: Mail, label: "Email", value: "engrmdjakariasheikhmahi@gmail.com", href: "mailto:engrmdjakariasheikhmahi@gmail.com" },
     { icon: Phone, label: "Phone", value: "+880 1570-222364", href: "tel:+880 1570-222364" },
     { icon: MapPin, label: "Location", value: "Dhaka, Bangladesh" },
   ];
