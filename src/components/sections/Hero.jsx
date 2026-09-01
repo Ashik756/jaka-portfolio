@@ -5,7 +5,7 @@ import portrait from "../../assets/jakaria.png";
 import Reveal from "../ui/Reveal.jsx";
 import Counter from "../ui/Counter.jsx";
 import { TITLES, HERO_STATS } from "../../data/portfolio.js";
-import CV from "../../assets/Jakaria_Shekh_Mahi_CV.pdf"
+import CV from "../../assets/Resume of MD Jakaria Sheikh Mahi.pdf"
 
 function Typed() {
   const [i, setI] = useState(0);
